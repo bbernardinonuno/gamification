@@ -1,6 +1,7 @@
 package com.grupocmc.protein.administration.infrastructure.framework.controller;
 
 import com.grupocmc.protein.ProteinApplication;
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -32,6 +33,7 @@ public final class ActionControllerAcceptanceTest {
     // then
     actual.andExpect(status().is(201))
             .andExpect(content().string(""));
+    Assertions.assertThat(true).isFalse();
   }
 
   private ResultActions createAction(final Map<String, Object> actionData) throws Exception {
