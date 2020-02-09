@@ -6,4 +6,8 @@ public class Calculator {
     return a + b;
   }
 
+  public int mod2(int a) {
+    return a%2;
+  }
+
 }
