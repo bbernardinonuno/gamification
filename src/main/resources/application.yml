@@ -1,0 +1,19 @@
+docker:
+  host: "${DOCKER_IP:localhost}"
+
+spring:
+  main:
+    banner-mode: "OFF"
+  datasource:
+    url: jdbc:mysql://${docker.host}:3306/gamification?useSSL=false
+    username: root
+    password: mysql
+  flyway:
+    locations: classpath:db/migration
+    schemas: gamification
+
+server:
+  port: 8000
+  compression:
+    enabled: true
+    mime-types: application/json

@@ -1,0 +1,1 @@
+CREATE DATABASE IF NOT EXISTS gamification default CHARACTER SET utf8;

@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+
+  # Database Service (Mysql)
+  db:
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_DATABASE: gamification
+      MYSQL_ROOT_PASSWORD: mysql
